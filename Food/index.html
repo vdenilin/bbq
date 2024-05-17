@@ -4,12 +4,17 @@
     <title>Flower</title>
     <link rel="stylesheet" href="homepractice.css">
     <style>
+        /* Your CSS styles here */
         body {
-            background: rgb(221, 186, 186);
-            color: rgb(14, 5, 5);
+            background: black;
+            color: #f1dada;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.5); /* Transparent white background */
+            padding: 20px; /* Adjust padding as needed */
         }
         header {
             background-color: gray;
@@ -37,28 +42,28 @@
             top: -30px;
             width: 300px;
         }
+
         h1 {
-            background-color: gray;
+            background-color: hsl(60, 84%, 62%);
             text-align: center;
+           color:black;
         }
         section {
             background-image: url("b1.jpg");
             background-size: 100%;
             background-position: center;
-            color: white;
+            color: #ffffff;
             padding: 20px;
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
             justify-content: space-around;
         }
         .features, .food {
             background-color: white;
-            color: white;
+            color:white; /* Change text color to black for better visibility */
             padding: 10px;
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
             justify-content: space-around;
         }
         .features figure, .food figure {
@@ -67,136 +72,207 @@
             text-transform: uppercase;
             width: 200px;
         }
-        .features figure img, .food figure img {
-            border: 5px solid #f1eded;
-            border-radius: 30%;
-            box-shadow: gray 0 0 10px;
-            width: 200px;
+        .features button, .food button {
+            border: none;
+            background: none;
             cursor: pointer;
+            padding: 0; /* Remove default button padding
+             */
         }
-        ul {
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-        }
-        li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-        footer {
-            background: black;
-            padding: 10px 20px;
+
+        .features button img,
+.food button img {
+    display: block;
+    width: 180px; /* Adjust image width */
+    height: 180px; /* Adjust image height */
+    border: 2px solid white; /* Add white border */
+    border-radius: 5px; /* Optional: Add border radius for a rounded look */
+    margin: 10px; /* Add margin for spacing */
+}
+
+        .container {
             text-align: center;
-            color: white;
+            margin: 20px;
+        }
+        .container img {
+            width: 200px;
+        }
+        .hidden {
+            display: none;
+        }
+
+        header ul {
+            list-style-type: none; /* Remove bullet points */
+            display: flex; /* Align items in a row */
+            justify-content: left; /* Align items to the right */
+        }
+
+        header ul li {
+            margin-right: 20px; /* Add space between list items */
+        }
+
+        /* Add styling for navigation links */
+        header ul li:not(.logo) a { /* Exclude logo from this style */
+            color:black;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #eae4e4dd; /* White transparent background */
+            border-radius: 5px; /* Optional: Add border radius */
         }
     </style>
-    <script>
-        function showAlert(element) {
-            var figcaptionElements = element.parentElement.getElementsByTagName('figcaption');
-            var description = "";
-            for (var i = 0; i < figcaptionElements.length; i++) {
-                description += figcaptionElements[i].innerText + "\n";
-            }
-            var price = element.parentElement.getElementsByTagName('p')[0].innerText;
-            alert(description + price);
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="logo"><a href="index.html">Logo flower</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="FlowerShop_AboutUs.html">About</a></li>
-                <li><a href="FloweShop_Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li class="logo"><a href="index.html">Logo flower</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="FlowerShop_AboutUs.html">About</a></li>
+                    <li><a href="FloweShop_Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
     <img src="Yfrontpage.png" style="width: 100%; height: 5%;"> <!-- Advertisement sale picture front page -->
     <h1>Menu</h1>
 
     <section class="features">
-        <figure>
-            <img src="y1.png" alt="y1" onclick="showAlert(this)">
-            <figcaption>Y1</figcaption>
-            <figcaption>With java rice</figcaption>
-            <p>Price: Pesos 95.0</p>
-        </figure>
-        <figure>
-            <img src="y2.png" alt="y2" onclick="showAlert(this)">
-            <figcaption>Y2</figcaption>
-            <figcaption>With java rice</figcaption>
-            <p>Price: Pesos 139.0</p>
-        </figure>
-        <figure>
-            <img src="y3.png" alt="y3" onclick="showAlert(this)">
-            <figcaption>Y3</figcaption>
-            <figcaption>With java rice + hotdog</figcaption>
-            <p>Price: Pesos 129.0</p>
-        </figure>
-        <figure>
-            <img src="y4.png" alt="y4" onclick="showAlert(this)">
-            <figcaption>Y4</figcaption>
-            <figcaption>With Tenga + rice</figcaption>
-            <p>Price: Pesos 129.0</p>
-        </figure>
-        <figure>
-            <img src="y5.png" alt="y5" onclick="showAlert(this)">
-            <figcaption>Y5</figcaption>
-            <figcaption>With Isaw Baboy+ java rice</figcaption>
-            <p>Price: Pesos 129.0</p>
-        </figure>
-        <figure>
-            <img src="y6.png" alt="y6" onclick="showAlert(this)">
-            <figcaption>Y6</figcaption>
-            <figcaption>With Isaw Manok+ java rice</figcaption>
-            <p>Price: Pesos 129.0</p>
-        </figure>
+        <div>
+            <button onclick="showDescription('desc1')">
+                <img src="y1.png" alt="y1">
+            </button>
+            <div id="desc1" class="hidden container">
+                <figcaption>Y1</figcaption>
+                <figcaption>With java rice</figcaption>
+                <p>Price: Pesos 95.0</p>
+            </div>
+        </div>
+
+        <div>
+            <button onclick="showDescription('desc2')">
+                <img src="y2.png" alt="y2">
+            </button>
+            <div id="desc2" class="hidden container">
+                <figcaption>Y2</figcaption>
+                <figcaption>With java rice</figcaption>
+                <p>Price: Pesos 139.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc3')">
+                <img src="y3.png" alt="y3">
+            </button>
+            <div id="desc3" class="hidden container">
+                <figcaption>Y3</figcaption>
+                <figcaption>With java rice + hotdog</figcaption>
+                <p>Price: Pesos 129.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc4')">
+                <img src="y4.png" alt="y4">
+            </button>
+            <div id="desc4" class="hidden container">
+                <figcaption>Y4</figcaption>
+                <figcaption>With Tenga + rice</figcaption>
+                <p>Price: Pesos 129.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc5')">
+                <img src="y5.png" alt="y5">
+            </button>
+            <div id="desc5" class="hidden container">
+                <figcaption>Y5</figcaption>
+                <figcaption>With Isaw Baboy+ java rice</figcaption>
+                <p>Price: Pesos 129.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc6')">
+                <img src="y6.png" alt="y6">
+            </button>
+            <div id="desc6" class="hidden container">
+                <figcaption>Y6</figcaption>
+                <figcaption>With Isaw Manok+ java rice</figcaption>
+                <p>Price: Pesos 129.0</p>
+            </div>
+        </div>
     </section>
 
     <section class="food">
-        <figure>
-            <img src="y7.png" alt="y7" onclick="showAlert(this)">
-            <figcaption>Y7</figcaption>
-            <figcaption>Yes with Friends</figcaption>
-            <p>Price: Pesos 235.0</p>
-        </figure>
-        <figure>
-            <img src="y8.png" alt="y8" onclick="showAlert(this)">
-            <figcaption>Y8</figcaption>
-            <figcaption>Inihaw na liempo + java rice</figcaption>
-            <p>Price: Pesos 229.0</p>
-        </figure>
-        <figure>
-            <img src="y9.png" alt="y9" onclick="showAlert(this)">
-            <figcaption>Y9</figcaption>
-            <figcaption>Chiken BBQ (Leg quarter) + java rice</figcaption>
-            <p>Price: Pesos 117.0</p>
-        </figure>
-        <figure>
-            <img src="y10.png" alt="y10" onclick="showAlert(this)">
-            <figcaption>Y10</figcaption>
-            <figcaption>Inihaw na Porkchop + java rice</figcaption>
-            <p>Price: Pesos 125.0</p>
-        </figure>
-        <figure>
-            <img src="y11.png" alt="y11" onclick="showAlert(this)">
-            <figcaption>Y11</figcaption>
-            <figcaption>Isaw bilog + java rice</figcaption>
-            <p>Price: Pesos 135.0</p>
-        </figure>
-        <figure>
-            <img src="y12.png" alt="y12" onclick="showAlert(this)">
-            <figcaption>Y12</figcaption>
-            <figcaption>Bulaklak + java rice</figcaption>
-            <p>Price: Pesos 129.0</p>
-        </figure>
-    </section>
+        <div>
+            <button onclick="showDescription('desc7')">
+                <img src="y7.png" alt="y7">
+            </button>
+            <div id="desc7" class="hidden container">
+                <figcaption>Y7</figcaption>
+                <figcaption>Yes with Friends</figcaption>
+                <p>Price: Pesos 235.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc8')">
+                <img src="y8.png" alt="y8">
+            </button>
+            <div id="desc8" class="hidden container">
+                <figcaption>Y8</figcaption>
+                <figcaption>Inihaw na liempo + java rice</figcaption>
+                <p>Price: Pesos 229.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc9')">
+                <img src="y9.png" alt="y9">
+            </button>
+            <div id="desc9" class="hidden container">
+                <figcaption>Y9</figcaption>
+                <figcaption>Chiken BBQ (Leg quarter) + java rice</figcaption>
+                <p>Price: Pesos 117.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc10')">
+                <img src="y10.png" alt="y10">
+            </button>
+            <div id="desc10" class="hidden container">
+                <figcaption>Y10</figcaption>
+                <figcaption>Inihaw na Porkchop + java rice</figcaption>
+                <p>Price: Pesos 125.0</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="showDescription('desc11')">
+                <img src="y11.png" alt="y11">
+            </button>
+            <div id="desc11" class="hidden container">
+                    <figcaption>Y11</figcaption>
+                    <figcaption>Isaw bilog + java rice</figcaption>
+                    <p>Price: Pesos 135.0</p>
+                </div>
+            </div>
+            <div>
+                <button onclick="showDescription('desc12')">
+                    <img src="y12.png" alt="y12">
+                </button>
+                <div id="desc12" class="hidden container">
+                    <figcaption>Y12</figcaption>
+                    <figcaption>Bulaklak + java rice</figcaption>
+                    <p>Price: Pesos 129.0</p>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        footer
-    </footer>
-</body>
-</html>
+        <script>
+            function showDescription(id) {
+                var description = document.getElementById(id);
+                if (description.classList.contains('hidden')) {
+                    description.classList.remove('hidden');
+                } else {
+                    description.classList.add('hidden');
+                }
+            }
+        </script>
+    </body>
+    </html>
